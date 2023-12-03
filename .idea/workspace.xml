@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70875ff8-efd6-4d62-9515-a061fe043bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/images/hangman0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hangman1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hangman2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hangman3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hangman4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hangman5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hangman6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangmanworkingwoutgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/hangmanworkingwoutgui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +57,17 @@
       <updated>1701623737890</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

@@ -2,6 +2,9 @@ import random  # random module provides functions that generate random numbers a
 
 
 def choosing_word():  # choosing a word from the topics
+
+    # TODO: Use a separate file to store words
+
     movies = ["fastandfurious", "harrypotter", "marvelavengers", "conjuring", "thenun", "incredibles", "inception",
               "barbie", "deadpool", "spiderman", "ironman", "thor", "thedarkknight", "avatar", "jurassicpark",
               "johnwick", "terminator", "oppenheimer", "barbie", "joker"]
