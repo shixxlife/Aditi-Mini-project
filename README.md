@@ -1,2 +1,2 @@
-# Aditi-Mini-project
+# Python-Mini-project
 Mini project BTech 1st year
