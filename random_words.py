@@ -9,4 +9,4 @@ words = [
         "beach", "forest", "rainbow", "volcano", "island",
         "book", "novel", "poetry", "library", "education",
         "sunset", "campfire", "adventure", "discovery", "wonder"
-    ]
+        ]

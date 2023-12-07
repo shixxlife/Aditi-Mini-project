@@ -1,7 +1,7 @@
 import pygame
 import math
-import random
-import random_words
+import menu
+import single_player_functions as func_file
 
 pygame.init()
 
@@ -33,8 +33,8 @@ for i in range(7):
     images.append(image)
 
 # Game variables
-hangman_status = 0
-word = random_words.words[random.randint(0, len(random_words.words))].upper()
+hangman_status = 6
+word = ""
 guessed = []
 
 # colors
@@ -58,7 +58,7 @@ def draw():
     display_word = ""
     for letter in word:
         if letter == " ":
-            display_word += " "
+            display_word += "  "
         elif letter in guessed:
             display_word += letter + " "
         else:
@@ -75,7 +75,7 @@ def draw():
             win.blit(text, (x - text.get_width() / 2, y - text.get_height() / 2))
 
     # draw hangman and update display
-    win.blit(images[hangman_status], (150, 100))
+    win.blit(images[hangman_status], (50, 100))
     pygame.display.update()
 
 
@@ -106,6 +106,7 @@ def main():
             # Exit game
             if event.type == pygame.QUIT:
                 run = False
+                menu.forced_quit()
 
             # check collision / button pressed
             if event.type == pygame.MOUSEBUTTONDOWN:
@@ -118,7 +119,7 @@ def main():
                             letter[3] = False
                             guessed.append(ltr)
                             if ltr not in word:
-                                hangman_status += 1
+                                hangman_status -= 1
 
         draw()
 
@@ -131,12 +132,23 @@ def main():
 
         if won:
             display_message("YOU WIN")
+            menu.main_menu()
             break
 
-        if hangman_status == 6:
+        if hangman_status == 0:
             display_message("YOU LOSE")
+            menu.main_menu()
             break
 
 
-main()
-pygame.quit()
+def reset():
+    global hangman_status, word, guessed
+
+    hangman_status = 6
+    word = (func_file.word()).upper()
+    print(word)
+    guessed = []
+
+    for letter in letters:
+        letter[3] = "visible"
+    main()

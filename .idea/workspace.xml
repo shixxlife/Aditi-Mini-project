@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70875ff8-efd6-4d62-9515-a061fe043bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/random_words.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NewWords(CSV).csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/single_player_functions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/word_lists.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangmanworkingwoutgui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman_Draft_with_Hints_and_Scramble.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hangmulti.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/random_words.py" beforeDir="false" afterPath="$PROJECT_DIR$/random_words.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +52,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;adithya&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/adika/Documents/College/Code/Unit 4/OOP&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.appearance&quot;
   }
 }</component>
