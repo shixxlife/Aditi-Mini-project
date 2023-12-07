@@ -1,5 +1,4 @@
 import pygame
-import gui
 import single_player_functions as menu1
 
 pygame.init()
