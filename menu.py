@@ -1,10 +1,11 @@
 import pygame
-import single_player_functions as menu1
+import single_player_functions as single
+import multiplayer
 
 pygame.init()
 
 # Setting up display
-WIDTH, HEIGHT = 800, 500
+WIDTH, HEIGHT = 1000, 500
 win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Hangman")
 
@@ -59,11 +60,12 @@ def main_menu():
                 if (solox - 30 < m_x < solox - 30 + text1.get_width() + 60) and \
                         (soloy - 20 < m_y < soloy - 20 + text1.get_height() + 40):
                     print("SINGLE PLAYER")
-                    menu1.start()
+                    single.start()
 
                 elif (multix - 42 < m_x < multix - 42 + text2.get_width() + 84) and \
                         (multiy - 20 < m_y < multiy - 20 + text2.get_height() + 40):
                     print("MULTI PLAYER")
+                    multiplayer.multiplayer()
 
 
 def forced_quit():

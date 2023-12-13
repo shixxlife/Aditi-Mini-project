@@ -2,11 +2,12 @@ import pygame
 import math
 import menu
 import single_player_functions as func_file
+import multiplayer
 
 pygame.init()
 
 # Setup display
-WIDTH, HEIGHT = 800, 500
+WIDTH, HEIGHT = 1000, 500
 win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Hangman")
 
@@ -59,7 +60,6 @@ def draw():
     win.fill(WHITE)
 
     # draw title
-    hint_text = LETTER_FONT.render("HINT:" + hint, 1, BLACK)
     text = TITLE_FONT.render("HANGMAN", 1, BLACK)
     win.blit(text, ((WIDTH - text.get_width()) / 2, 10))
 
@@ -133,14 +133,28 @@ def main():
                             if ltr not in word:
                                 hangman_status -= 1
 
+            # check collision / keyboard input
+            elif event.type == pygame.KEYDOWN:
+                for letter in letters:
+                    input_ = event.unicode
+
+                    if input_ == letter[2].lower():
+                        letter[3] = False
+                        guessed.append(letter[2])
+                        if letter[2] not in word:
+                            hangman_status -= 1
+
+
+
         draw()
 
         # winning status
         won = True
         for letter in word:
             if letter not in guessed:
-                won = False
-                break
+                if letter != " ":
+                    won = False
+                    break
 
         if won:
             display_message("YOU WIN")
@@ -153,7 +167,7 @@ def main():
             break
 
 
-def reset():
+def reset_single():
     global hangman_status, word, guessed, hint
 
     hangman_status = 6
@@ -164,6 +178,20 @@ def reset():
     print(hint)
     guessed = []
 
+    for letter in letters:
+        letter[3] = "visible"
+    main()
+
+
+def reset_multi():
+    global hangman_status, guessed, word
+
+    hangman_status = 6
+    word = multiplayer.get_word().upper()
+
+    print(word)
+    print("Executed")
+    guessed = []
     for letter in letters:
         letter[3] = "visible"
     main()
