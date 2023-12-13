@@ -35,6 +35,7 @@ for i in range(7):
 # Game variables
 hangman_status = 6
 word = ""
+hint = ""
 guessed = []
 
 # colors
@@ -47,12 +48,23 @@ clock = pygame.time.Clock()
 run = True
 
 
+# hint function
+def show_hint():
+    if hint != "":
+        hint_text = LETTER_FONT.render("HINT:" + hint, 1, BLACK)
+        win.blit(hint_text, (225, 100))
+
+
 def draw():
     win.fill(WHITE)
 
     # draw title
+    hint_text = LETTER_FONT.render("HINT:" + hint, 1, BLACK)
     text = TITLE_FONT.render("HANGMAN", 1, BLACK)
     win.blit(text, ((WIDTH - text.get_width()) / 2, 10))
+
+    # display hint
+    show_hint()
 
     # draw word and underscored
     display_word = ""
@@ -142,11 +154,14 @@ def main():
 
 
 def reset():
-    global hangman_status, word, guessed
+    global hangman_status, word, guessed, hint
 
     hangman_status = 6
-    word = (func_file.word()).upper()
+    word = (func_file.word()[0]).upper()
+    if len(func_file.word()) == 2:
+        hint = func_file.word()[1]
     print(word)
+    print(hint)
     guessed = []
 
     for letter in letters:

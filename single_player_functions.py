@@ -1,8 +1,9 @@
 import pygame
 import Hangman_Draft_with_Hints_and_Scramble as func_file
 import gui
+import csv
 
-HANGMAN_WORD = ""
+HANGMAN_WORD = []
 
 pygame.init()
 
@@ -72,8 +73,9 @@ def start():
                     text_sub = BUTTON_FONT.render(words, 1, BLACK)
 
                     if (x - 5 < m_x < x + text_sub.get_width() + 5) and (y < m_y < y + text_sub.get_height()):
-                        global HANGMAN_WORD
-                        HANGMAN_WORD = func_file.choosing_word(words)
+                        HANGMAN_WORD.append(func_file.choosing_word(words))
+                        if words == "If you want to learn new words":
+                            HANGMAN_WORD.append(get_hint(HANGMAN_WORD[0]))
                         gui.reset()
 
                     y += 50
@@ -84,3 +86,12 @@ def start():
 def word():
     global HANGMAN_WORD
     return HANGMAN_WORD
+
+
+def get_hint(new_word):
+    file = open("NewWords(CSV).csv", "r")
+    reader = csv.reader(file)
+
+    for words in reader:
+        if words[0] == new_word:
+            return words[1]
