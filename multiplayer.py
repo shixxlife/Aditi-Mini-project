@@ -10,8 +10,9 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Hangman")
 
 # Font and colors
-HEADING_FONT = pygame.font.SysFont('comicsans', 35)
-FONT = pygame.font.SysFont('comicsans', 25)
+font = 'comicsans'
+HEADING_FONT = pygame.font.SysFont(font, 35)
+FONT = pygame.font.SysFont(font, 25)
 BLACK = (0, 0, 0)
 
 text = ""
@@ -72,3 +73,8 @@ def retry():
     global text
     text = ""
     multiplayer()
+
+
+def update_font(new_font):
+    global font
+    font = new_font

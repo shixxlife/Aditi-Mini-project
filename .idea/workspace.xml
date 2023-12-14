@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70875ff8-efd6-4d62-9515-a061fe043bdc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/hangman_draft_shortened.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multiplayer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/font_settings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/settings.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman_Draft_with_Hints_and_Scramble.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman_Draft_with_Hints_and_Scramble (og file).py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiplayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/multiplayer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/single_player_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/single_player_functions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

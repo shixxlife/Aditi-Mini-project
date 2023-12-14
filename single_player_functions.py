@@ -13,7 +13,8 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Hangman")
 
 # Fonts and colors
-BUTTON_FONT = pygame.font.SysFont('comicsans', 30)
+font = 'comicsans'
+BUTTON_FONT = pygame.font.SysFont(font, 30)
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 
@@ -95,3 +96,8 @@ def get_hint(new_word):
     for words in reader:
         if words[0] == new_word:
             return words[1]
+
+
+def update_font(new_font):
+    global font
+    font = new_font

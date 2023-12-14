@@ -23,9 +23,10 @@ for i in range(26):
     letters.append([x, y, chr(65 + i), True])
 
 # fonts
-LETTER_FONT = pygame.font.SysFont('comicsans', 25)
-WORD_FONT = pygame.font.SysFont('comicsans', 40)
-TITLE_FONT = pygame.font.SysFont('comicsans', 50)
+font = 'comicsans'
+LETTER_FONT = pygame.font.SysFont(font, 25)
+WORD_FONT = pygame.font.SysFont(font, 40)
+TITLE_FONT = pygame.font.SysFont(font, 50)
 
 # Loading images
 images = []
@@ -195,3 +196,9 @@ def reset_multi():
     for letter in letters:
         letter[3] = "visible"
     main()
+
+
+def update_font(new_font):
+    global font
+    font = new_font
+
