@@ -109,7 +109,10 @@ def display_message(message):
 
 def main():
     # getting global variables
-    global run, hangman_status
+    global run, hangman_status, LETTER_FONT, WORD_FONT, TITLE_FONT
+    LETTER_FONT = pygame.font.SysFont(font, 25)
+    WORD_FONT = pygame.font.SysFont(font, 40)
+    TITLE_FONT = pygame.font.SysFont(font, 50)
 
     # Game loop
     while run:

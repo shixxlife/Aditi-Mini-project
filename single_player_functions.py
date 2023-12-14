@@ -27,7 +27,12 @@ options = ["Movies", "TV-Shows", "Sports", "Fruits", "Animals",
 
 # Displaying the text and boxes
 def display_text():
+
+    global BUTTON_FONT
+
     win.fill(WHITE)
+
+    BUTTON_FONT = pygame.font.SysFont(font, 30)
 
     # main heading
     text_x = 10

@@ -53,7 +53,11 @@ def buttons():
 def main_menu():
     while True:
 
-        global font_name
+        global font_name, BUTTON_FONT, text1, text2
+
+        BUTTON_FONT = pygame.font.SysFont(font_name, 30)
+        text1 = BUTTON_FONT.render(solo_text, 1, BLACK)
+        text2 = BUTTON_FONT.render(multiplayer_text, 1, BLACK)
 
         buttons()
         print(font_name)
