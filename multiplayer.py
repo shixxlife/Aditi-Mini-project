@@ -10,8 +10,9 @@ win = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Hangman")
 
 # Font and colors
-HEADING_FONT = pygame.font.SysFont('comicsans', 35)
-FONT = pygame.font.SysFont('comicsans', 25)
+font = 'comicsans'
+HEADING_FONT = pygame.font.SysFont(font, 35)
+FONT = pygame.font.SysFont(font, 25)
 BLACK = (0, 0, 0)
 
 text = ""
@@ -28,7 +29,11 @@ clock = pygame.time.Clock()
 
 
 def multiplayer():
-    global text
+    global text, FONT, HEADING_FONT
+
+    HEADING_FONT = pygame.font.SysFont(font, 35)
+    FONT = pygame.font.SysFont(font, 25)
+
     text = ""
 
     while True:
@@ -59,16 +64,27 @@ def multiplayer():
 
 
 def get_word():
+    Text = False
     for a in text:
         if a.isalpha() == 0:
             if a != " ":
                 print("Dont use symbols fuckhead")
                 retry()
-
-    return text
+        else:
+            Text = True
+    if Text:
+        return text
+    else:
+        print("Type something fucker")
+        retry()
 
 
 def retry():
     global text
     text = ""
     multiplayer()
+
+
+def update_font(new_font):
+    global font
+    font = new_font
