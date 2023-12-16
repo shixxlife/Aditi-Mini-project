@@ -161,14 +161,23 @@ def main():
                     break
 
         if won:
-            display_message("YOU WIN")
-            menu.main_menu()
-            break
+            if multiplayer.check_multiplayer():
+                multiplayer.winning_screen("won")
+                pygame.quit()
+            else:
+                display_message("YOU WIN")
+                menu.main_menu()
+                break
 
         if hangman_status == 0:
-            display_message("YOU LOSE")
-            menu.main_menu()
-            break
+            if multiplayer.check_multiplayer():
+                multiplayer.winning_screen("lose")
+                pygame.quit()
+            else:
+                display_message("YOU LOST")
+                menu.main_menu()
+                break
+
 
 
 def reset_single():

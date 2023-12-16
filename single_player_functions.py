@@ -79,6 +79,7 @@ def start():
                     text_sub = BUTTON_FONT.render(words, 1, BLACK)
 
                     if (x - 5 < m_x < x + text_sub.get_width() + 5) and (y < m_y < y + text_sub.get_height()):
+                        HANGMAN_WORD.clear()
                         HANGMAN_WORD.append(funcFile.choosing_word(words))
                         if words == "If you want to learn new words":
                             HANGMAN_WORD.append(get_hint(HANGMAN_WORD[0]))
