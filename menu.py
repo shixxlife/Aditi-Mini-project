@@ -60,7 +60,6 @@ def main_menu():
         text2 = BUTTON_FONT.render(multiplayer_text, 1, BLACK)
 
         buttons()
-        print(font_name)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:

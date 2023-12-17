@@ -100,7 +100,7 @@ def display_message(message):
     ans_text = LETTER_FONT.render(word, 1, BLACK)
     win.blit(text, ((WIDTH - text.get_width()) / 2, (HEIGHT - text.get_height()) / 2))
 
-    if message == "YOU LOSE":
+    if message == "YOU LOST":
         win.blit(ans_text, ((WIDTH - text.get_width()) / 2 + 20, (HEIGHT - text.get_height()) / 2 + 50))
 
     pygame.display.update()
@@ -162,7 +162,7 @@ def main():
 
         if won:
             if multiplayer.check_multiplayer():
-                multiplayer.winning_screen("won")
+                multiplayer.winning_screen("wins")
                 pygame.quit()
             else:
                 display_message("YOU WIN")
@@ -171,7 +171,7 @@ def main():
 
         if hangman_status == 0:
             if multiplayer.check_multiplayer():
-                multiplayer.winning_screen("lose")
+                multiplayer.winning_screen("loses")
                 pygame.quit()
             else:
                 display_message("YOU LOST")
@@ -203,7 +203,6 @@ def reset_multi():
     word = multiplayer.get_word().upper()
 
     print(word)
-    print("Executed")
     guessed = []
     for letter in letters:
         letter[3] = "visible"

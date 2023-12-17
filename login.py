@@ -1,7 +1,6 @@
 import pygame
 from subprocess import call
 
-
 pygame.init()
 FONT = pygame.font.Font(None, 42)
 
@@ -18,7 +17,9 @@ def main():
             if event.type == pygame.QUIT:
                 done = True
             elif event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_RETURN:
+                if event.key == pygame.K_BACKSPACE:
+                    password = password[:-1]
+                elif event.key == pygame.K_RETURN:
                     if password == "password":
                         pygame.quit()
                         call(["python", "gui.py"])
@@ -29,7 +30,7 @@ def main():
 
         screen.fill((30, 30, 30))
         # Render the asterisks and blit them.
-        password_surface = FONT.render('*'*len(password), True, (70, 200, 150))
+        password_surface = FONT.render('*' * len(password), True, (70, 200, 150))
         screen.blit(password_surface, (30, 30))
 
         pygame.display.flip()
@@ -38,4 +39,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    
